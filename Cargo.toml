@@ -1,7 +1,7 @@
 [package]
 name = "oxiguitar-wav-plugin"
 description = "The OxiGuitar WAV plugin: File → Export → WAV Audio, the score's sound as a WAV file, 16- or 24-bit or 32-bit float, at 44.1 or 48 kHz."
-version = "1.0.0"
+version = "0.1.0"
 edition = "2024"
 # Rust from rustup, raised only when something needs it (CONTRIBUTING.md).
 rust-version = "1.99"

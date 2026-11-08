@@ -1,0 +1,13 @@
+{
+  "gitCommitHash": "53f3264b38906d98c3b737a0f4c320b46323550a",
+  "analyzedAt": "2026-11-08T00:00:00.000Z",
+  "version": "1.0.0",
+  "totalFiles": 18,
+  "totalNodes": 18,
+  "totalEdges": 18,
+  "totalLayers": 6,
+  "tourSteps": 6,
+  "languages": ["rust", "yaml", "markdown", "toml", "shell", "json"],
+  "frameworks": ["oxiguitar-plugin"],
+  "complexity": "small"
+}

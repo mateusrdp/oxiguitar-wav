@@ -1,0 +1,481 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "53f3264b38906d98c3b737a0f4c320b46323550a",
+  "generatedAt": "2026-11-07T21:05:29.041Z",
+  "files": {
+    "src/lib.rs": {
+      "filePath": "src/lib.rs",
+      "contentHash": "f8a4cc5319de369786c6a4f3d3f7bc33de4c16c5f0be12d2a2145f7a6d0b8f8c",
+      "functions": [
+        {
+          "name": "bytes",
+          "owner": "Depth",
+          "params": [],
+          "returnType": "u16",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "key",
+          "owner": "Depth",
+          "params": [],
+          "returnType": "u64",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "title",
+          "owner": "Depth",
+          "params": [],
+          "returnType": "&'static str",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "default",
+          "owner": null,
+          "params": [],
+          "returnType": "Format",
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "from_settings",
+          "owner": "Format",
+          "params": [
+            "settings"
+          ],
+          "returnType": "Format",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "header",
+          "owner": "Format",
+          "params": [
+            "frames"
+          ],
+          "returnType": "Vec<u8>",
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "next",
+          "owner": "Export",
+          "params": [],
+          "returnType": "f32",
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "sixteen",
+          "owner": "Export",
+          "params": [
+            "v"
+          ],
+          "returnType": "i16",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "export",
+          "owner": "Wav",
+          "params": [],
+          "returnType": "std::sync::MutexGuard<'_, Option<Export>>",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "start",
+          "owner": null,
+          "params": [],
+          "returnType": "Result<ExportStart, Error>",
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "samples",
+          "owner": null,
+          "params": [
+            "interleaved"
+          ],
+          "returnType": "Result<Vec<u8>, Error>",
+          "exported": false,
+          "lineCount": 27
+        },
+        {
+          "name": "finish",
+          "owner": null,
+          "params": [
+            "cancelled"
+          ],
+          "returnType": "Result<ExportEnd, Error>",
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "content",
+          "owner": null,
+          "params": [],
+          "returnType": "TabContent",
+          "exported": false,
+          "lineCount": 48
+        },
+        {
+          "name": "on",
+          "owner": null,
+          "params": [
+            "widget",
+            "event"
+          ],
+          "returnType": "Result<(), Error>",
+          "exported": false,
+          "lineCount": 15
+        },
+        {
+          "name": "start",
+          "owner": null,
+          "params": [
+            "host"
+          ],
+          "returnType": "Result<WavPlugin, Error>",
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "audio_exporter",
+          "owner": null,
+          "params": [
+            "id"
+          ],
+          "returnType": "Option<&dyn AudioExporter>",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "settings_window",
+          "owner": null,
+          "params": [],
+          "returnType": "Option<&dyn Tab>",
+          "exported": false,
+          "lineCount": 3
+        }
+      ],
+      "classes": [
+        {
+          "name": "Depth",
+          "methods": [
+            "bytes",
+            "key",
+            "title"
+          ],
+          "properties": [
+            "Sixteen",
+            "TwentyFour",
+            "Float"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "Format",
+          "methods": [
+            "default",
+            "from_settings",
+            "header"
+          ],
+          "properties": [
+            "depth",
+            "rate"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "Export",
+          "methods": [
+            "next",
+            "sixteen"
+          ],
+          "properties": [
+            "format",
+            "frames",
+            "noise"
+          ],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "Wav",
+          "methods": [
+            "export",
+            "start",
+            "samples",
+            "finish"
+          ],
+          "properties": [
+            "host",
+            "export"
+          ],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "Window",
+          "methods": [
+            "content",
+            "on"
+          ],
+          "properties": [
+            "host"
+          ],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "WavPlugin",
+          "methods": [
+            "start",
+            "audio_exporter",
+            "settings_window"
+          ],
+          "properties": [
+            "wav",
+            "window"
+          ],
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "imports": [
+        {
+          "source": "std::sync",
+          "specifiers": [
+            "Mutex"
+          ]
+        },
+        {
+          "source": "oxiguitar_plugin::serde_json",
+          "specifiers": [
+            "Map",
+            "Value"
+          ]
+        },
+        {
+          "source": "oxiguitar_plugin",
+          "specifiers": [
+            "AudioExporter",
+            "Error",
+            "ErrorKind",
+            "ExportEnd",
+            "ExportStart",
+            "Host",
+            "Plugin",
+            "Row",
+            "Tab",
+            "TabContent",
+            "TabEvent",
+            "Widget"
+          ]
+        }
+      ],
+      "exports": [
+        "Depth",
+        "bytes",
+        "Format",
+        "from_settings",
+        "header",
+        "Wav",
+        "Window",
+        "WavPlugin"
+      ],
+      "totalLines": 483,
+      "hasStructuralAnalysis": true
+    },
+    "tests/contract.rs": {
+      "filePath": "tests/contract.rs",
+      "contentHash": "4d21ef6ddde2100d769d3eea087d96dfed308f21c9a1ddf020cac6db57d65660",
+      "functions": [
+        {
+          "name": "the_plugin_file_keeps_the_contract",
+          "owner": "",
+          "params": [],
+          "exported": false,
+          "lineCount": 17
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "std::path",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "Cargo.toml": {
+      "filePath": "Cargo.toml",
+      "contentHash": "152166115128406cc7a73dfd51f6d272192908546e3690ea4162d11c2a853620",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 55,
+      "hasStructuralAnalysis": false
+    },
+    "manifest.json": {
+      "filePath": "manifest.json",
+      "contentHash": "4c25d492e40895563f80437b24e9144d914ed6700b8812618ffda31f4002f63d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 15,
+      "hasStructuralAnalysis": false
+    },
+    "build-oxp.sh": {
+      "filePath": "build-oxp.sh",
+      "contentHash": "bd34203c1ffdc79d73737b9c5a0fc06782bccf49365a711cd7f60ed8a2eb0991",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 57,
+      "hasStructuralAnalysis": false
+    },
+    "scripts/check-dco.sh": {
+      "filePath": "scripts/check-dco.sh",
+      "contentHash": "09c2fc940f2e61ebbfe8f266bcbcb8c1aafd454ea078a1288566a0465a27570d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 71,
+      "hasStructuralAnalysis": false
+    },
+    "clippy.toml": {
+      "filePath": "clippy.toml",
+      "contentHash": "f47870687bec93d43189402220733f9f496cb22ec33914d2c35c4dc65c3ffa11",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": false
+    },
+    "deny.toml": {
+      "filePath": "deny.toml",
+      "contentHash": "e3533f4749ad3b5cc1868bf4a1ac96a33af22c34c142249de95883fda9e27bd7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 65,
+      "hasStructuralAnalysis": false
+    },
+    "rustfmt.toml": {
+      "filePath": "rustfmt.toml",
+      "contentHash": "d461d42d0e324e3bd489a46e068794c0358a9f542c90495ed15ee2e581cb66ad",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": false
+    },
+    "CHANGELOG.md": {
+      "filePath": "CHANGELOG.md",
+      "contentHash": "2187851d2b7b8408d3b0e2d55fa91d7abbd2028f037efb74379aef0170530018",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 27,
+      "hasStructuralAnalysis": false
+    },
+    "CLAUDE.md": {
+      "filePath": "CLAUDE.md",
+      "contentHash": "00c789ae73bf397045d4ec626609386bf3c2cabc51dd01c9dbae34c774d608a7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": false
+    },
+    "CONTRIBUTING.md": {
+      "filePath": "CONTRIBUTING.md",
+      "contentHash": "0c2c40fa6d4c15205eb5a4436820ebb174070b2f10cd698dbeb00f0655b0b41e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 43,
+      "hasStructuralAnalysis": false
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "45f6a630b9e6c32ad85fdb44a2cb4635b4c1351a2de75a962248175d573c4dce",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 29,
+      "hasStructuralAnalysis": false
+    },
+    ".github/dependabot.yml": {
+      "filePath": ".github/dependabot.yml",
+      "contentHash": "1d177c4b52c244956069a6269ed50492bb649dcaebb1a1b1ef9d610835eeb2d3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": false
+    },
+    ".github/pull_request_template.md": {
+      "filePath": ".github/pull_request_template.md",
+      "contentHash": "2725627b502bd9a41e49fa5324897c4c507ae2dc69a726057c974456140b6213",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": false
+    },
+    ".github/workflows/ci.yml": {
+      "filePath": ".github/workflows/ci.yml",
+      "contentHash": "147a2717a8b17c4cfc8241873ff15bb5ba4a284c43756059bc4bd251c1e3d195",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 175,
+      "hasStructuralAnalysis": false
+    },
+    ".github/workflows/release.yml": {
+      "filePath": ".github/workflows/release.yml",
+      "contentHash": "05e542ed8a08f72ecd78ed6d7aa078319de66730491cdaa5010bfdbeedc857f3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": false
+    },
+    ".github/workflows/publish.yml": {
+      "filePath": ".github/workflows/publish.yml",
+      "contentHash": "9e9558a0014ba86d7094778e0f523f7cd5b0f878213641035823951dd75a7e13",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 29,
+      "hasStructuralAnalysis": false
+    }
+  }
+}
